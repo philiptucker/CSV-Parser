@@ -7,39 +7,39 @@ import prisma from '../prisma';
 
 const parseCSVFile = () => {
   const csvFilePath = path.resolve(__dirname, 'people-100000.csv')
-  const fileContent = fs.readFileSync(csvFilePath, { encoding: 'utf-8'})
+  const fileContent = fs.readFileSync(csvFilePath, { encoding: 'utf-8' })
 
   const headers = [
-    'index', 
-    'userID', 
-    'firstName', 
-    'lastName', 
+    'index',
+    'userID',
+    'firstName',
+    'lastName',
     'sex',
-    'email', 
+    'email',
     'phone',
     'DOB',
     'jobTitle'
   ]
 
-  parse(fileContent, {delimiter: ',', columns: headers}, async (error, result: user[]) => {
+  parse(fileContent, { delimiter: ',', columns: headers }, async (error, result: user[]) => {
     if (error) {
       console.error(error)
     }
 
 
-    for (let i = 1; i < result.length; i++){
+    for (let i = 1; i < result.length; i++) {
       const user = result[i]
 
-      const { 
+      const {
         index,
-        userID, 
-        firstName, 
-        lastName, 
-        sex, 
-        email, 
-        phone, 
-        DOB, 
-        jobTitle 
+        userID,
+        firstName,
+        lastName,
+        sex,
+        email,
+        phone,
+        DOB,
+        jobTitle
       } = user
 
 
