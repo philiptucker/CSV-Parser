@@ -1,4 +1,4 @@
-import prisma from './prisma';
+import prisma from '../prisma';
 
 const commonNames = async () => {
   const users = await prisma.user.findMany({})

@@ -1,5 +1,4 @@
-
-import prisma from './prisma';
+import prisma from '../prisma';
 
 const findYouths = async () => {
   const users = await prisma.user.findMany({

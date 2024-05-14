@@ -1,6 +1,6 @@
-import commonNames from './findCommonName';
-import findYouths from './findYouths';
-import parseCSVFile from './parseCSV'
+import commonNames from './utils/findCommonName';
+import findYouths from './utils/findYouths';
+import parseCSVFile from './utils/parseCSV';
 
 
 //parseCSVFile();

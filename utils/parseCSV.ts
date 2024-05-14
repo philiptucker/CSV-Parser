@@ -1,8 +1,8 @@
-import * as fs from "fs"
-import * as path from "path"
+import * as fs from "fs";
+import * as path from "path";
 import { parse } from 'csv-parse';
-import user from './userType';
-import prisma from './prisma';
+import user from '../types/user';
+import prisma from '../prisma';
 
 
 const parseCSVFile = () => {
