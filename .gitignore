@@ -1,3 +1,4 @@
 /node_modules
+.env
 
 people-100000.csv
